@@ -1,7 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    form {
+      margin: 0 auto;
+      width: 300px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: calc(100% - 12px);
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="button"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="button"]:hover {
+      background-color: #0056b3;
+    }
+
+  </style>
 </head>
 <body>
   <h2>Login</h2>
@@ -31,4 +80,3 @@
   </script>
 </body>
 </html>
-
