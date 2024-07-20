@@ -1,4 +1,3 @@
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -24,55 +23,55 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(135deg, #ff0000, #ffffff);
-            clip-path: circle(30% at right 70%);
+            clip-path: circle(90% at right 70%);
             animation: moveBackground 6s infinite alternate;
         }
 
         @keyframes moveBackground {
             to {
-                clip-path: circle(30% at left 70%);
+                clip-path: circle(90% at left 70%);
             }
         }
 
         .container {
             position: relative;
             background: rgba(255, 255, 255, 0.9);
-            padding: 60px; /* Aumenta el padding */
+            padding: 180px; /* Aumenta el padding */
             border-radius: 15px;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
             text-align: center;
-            max-width: 500px; /* Aumenta el ancho máximo */
+            max-width: 1500px; /* Aumenta el ancho máximo */
             width: 100%;
             z-index: 1;
         }
 
         .logo {
-            max-width: 250px; /* Aumenta el tamaño máximo del logo */
-            margin-bottom: 30px; /* Aumenta el margen inferior */
+            max-width: 750px; /* Aumenta el tamaño máximo del logo */
+            margin-bottom: 90px; /* Aumenta el margen inferior */
         }
 
         input {
             width: 100%;
-            padding: 16px; /* Aumenta el padding */
-            margin-bottom: 20px; /* Aumenta el margen inferior */
+            padding: 48px; /* Aumenta el padding */
+            margin-bottom: 60px; /* Aumenta el margen inferior */
             border: 1px solid #ddd;
             border-radius: 5px;
             box-sizing: border-box;
             background-color: #f0f0f0;
             color: #333;
-            font-size: 18px; /* Aumenta el tamaño de la fuente */
+            font-size: 54px; /* Aumenta el tamaño de la fuente */
         }
 
         button {
             width: 100%;
-            padding: 16px; /* Aumenta el padding */
+            padding: 48px; /* Aumenta el padding */
             background-color: #ff0000;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 18px; /* Aumenta el tamaño de la fuente */
-            margin-bottom: 15px; /* Aumenta el margen inferior */
+            font-size: 54px; /* Aumenta el tamaño de la fuente */
+            margin-bottom: 45px; /* Aumenta el margen inferior */
             transition: background-color 0.3s, transform 0.3s;
         }
 
@@ -83,14 +82,14 @@
 
         #error-message {
             color: red;
-            margin-bottom: 15px; /* Aumenta el margen inferior */
-            font-size: 18px; /* Aumenta el tamaño de la fuente */
+            margin-bottom: 45px; /* Aumenta el margen inferior */
+            font-size: 54px; /* Aumenta el tamaño de la fuente */
         }
 
         #success-message {
             color: green;
-            margin-bottom: 15px; /* Aumenta el margen inferior */
-            font-size: 18px; /* Aumenta el tamaño de la fuente */
+            margin-bottom: 45px; /* Aumenta el margen inferior */
+            font-size: 54px; /* Aumenta el tamaño de la fuente */
         }
 
         #logoutButton {
@@ -102,17 +101,17 @@
         }
 
         h2 {
-            margin-bottom: 30px; /* Aumenta el margen inferior */
-            font-size: 24px; /* Aumenta el tamaño de la fuente */
+            margin-bottom: 90px; /* Aumenta el margen inferior */
+            font-size: 72px; /* Aumenta el tamaño de la fuente */
         }
 
         .clock-container {
             position: absolute;
-            top: 30px; /* Aumenta la posición desde la parte superior */
-            right: 30px; /* Aumenta la posición desde la derecha */
+            top: 90px; /* Aumenta la posición desde la parte superior */
+            right: 90px; /* Aumenta la posición desde la derecha */
             color: #ff0000;
             text-align: right;
-            font-size: 22px; /* Aumenta el tamaño de la fuente */
+            font-size: 66px; /* Aumenta el tamaño de la fuente */
             z-index: 2;
         }
 
@@ -190,7 +189,12 @@
         function updateTime() {
             const now = new Date();
             const time = now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-           
+            document.getElementById('time').textContent = time;
+        }
+    </script>
+</body>
+</html>
+
 
 
 
