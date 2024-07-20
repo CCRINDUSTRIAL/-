@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -37,42 +37,41 @@
         .container {
             position: relative;
             background: rgba(255, 255, 255, 0.9);
-            padding: 60px; /* Aumenta el padding */
+            padding: 40px;
             border-radius: 15px;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
             text-align: center;
-            max-width: 500px; /* Aumenta el ancho máximo */
+            max-width: 400px;
             width: 100%;
             z-index: 1;
         }
 
         .logo {
-            max-width: 250px; /* Aumenta el tamaño máximo del logo */
-            margin-bottom: 30px; /* Aumenta el margen inferior */
+            max-width: 200px;
+            margin-bottom: 20px;
         }
 
         input {
             width: 100%;
-            padding: 16px; /* Aumenta el padding */
-            margin-bottom: 20px; /* Aumenta el margen inferior */
+            padding: 12px;
+            margin-bottom: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
             box-sizing: border-box;
             background-color: #f0f0f0;
             color: #333;
-            font-size: 18px; /* Aumenta el tamaño de la fuente */
         }
 
         button {
             width: 100%;
-            padding: 16px; /* Aumenta el padding */
+            padding: 12px;
             background-color: #ff0000;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 18px; /* Aumenta el tamaño de la fuente */
-            margin-bottom: 15px; /* Aumenta el margen inferior */
+            font-size: 16px;
+            margin-bottom: 10px;
             transition: background-color 0.3s, transform 0.3s;
         }
 
@@ -83,14 +82,12 @@
 
         #error-message {
             color: red;
-            margin-bottom: 15px; /* Aumenta el margen inferior */
-            font-size: 18px; /* Aumenta el tamaño de la fuente */
+            margin-bottom: 10px;
         }
 
         #success-message {
             color: green;
-            margin-bottom: 15px; /* Aumenta el margen inferior */
-            font-size: 18px; /* Aumenta el tamaño de la fuente */
+            margin-bottom: 10px;
         }
 
         #logoutButton {
@@ -102,17 +99,16 @@
         }
 
         h2 {
-            margin-bottom: 30px; /* Aumenta el margen inferior */
-            font-size: 24px; /* Aumenta el tamaño de la fuente */
+            margin-bottom: 20px;
         }
 
         .clock-container {
             position: absolute;
-            top: 30px; /* Aumenta la posición desde la parte superior */
-            right: 30px; /* Aumenta la posición desde la derecha */
+            top: 20px;
+            right: 20px;
             color: #ff0000;
             text-align: right;
-            font-size: 22px; /* Aumenta el tamaño de la fuente */
+            font-size: 18px;
             z-index: 2;
         }
 
@@ -181,7 +177,8 @@
         // Verificar si el usuario está logueado al cargar la página
         window.onload = function() {
             if (sessionStorage.getItem('loggedIn') === 'true') {
-                window.location.href = 'https://sites.google.com/view/descarga-certificados/administrador';
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('logoutSection').style.display = 'block';
             }
             updateTime();
             setInterval(updateTime, 1000);
@@ -190,6 +187,16 @@
         function updateTime() {
             const now = new Date();
             const time = now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-           
+            const date = now.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            document.getElementById('time').textContent = time;
+            document.getElementById('date').textContent = date;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
 
 
